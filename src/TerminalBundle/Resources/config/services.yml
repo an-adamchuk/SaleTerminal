@@ -1,0 +1,12 @@
+services:
+     terminal.product.repository.pricing.class:
+          class: TerminalBundle\Service\Product\Repository\Pricing
+
+     terminal.product.discount.calculator.class:
+          class: TerminalBundle\Service\Product\DiscountCalculator
+
+     terminal.service.sale.point:
+         class: TerminalBundle\Service\Terminal\SalePoint
+         arguments:
+            - '@terminal.product.repository.pricing.class'
+            - '@terminal.product.discount.calculator.class'
