@@ -1,0 +1,11 @@
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /doc
+    defaults:  { _format: json }
+
+terminal:
+    resource: TerminalBundle\Controller\TerminalController
+    type: rest
+    prefix: /api
+
+
